@@ -1,0 +1,27 @@
+{
+  "name": "matrix-anim-jquery",
+  "version": "0.0.0",
+  "description": "An exercise to understand data state management using jquery ",
+  "homepage": "https://github.com/sravanrekandar/matrix-anim-jquery.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sravanrekandar/matrix-anim-jquery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sravanrekandar/matrix-anim-jquery.git/issues"
+  },
+  "devDependencies": {
+    "babelify": "~5.0.3",
+    "browser-sync": "^1.7.1",
+    "browserify": "^6.3.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.3",
+    "gulp-rename": "^1.2.0",
+    "lodash": "^2.4.1",
+    "rimraf": "~2.2.8",
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "^2.1.1"
+  },
+  "author": "sravanrekandar <sravanrekandar@gmail.com>",
+  "license": "MIT"
+}
