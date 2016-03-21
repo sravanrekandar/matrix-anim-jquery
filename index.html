@@ -1,1 +1,54 @@
-My Page
+<!doctype html>
+  <head>
+    <title>Matrix Anim - jQuery</title>
+    <link rel="stylesheet" href="./dist/app.css"
+  </head>
+  <body>
+    <div class="page-container">
+		<h1 class="text-center">
+            Matrix Anim - jQuery 
+            <a id="git-link" target="blank" href="https://github.com/sravanrekandar/matrix-anim-jquery">
+                <img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" width=30 alt="view on github" />
+            </a>
+        </h1>
+		<div class="text-center">
+            This is one of the series of exercises to understand the <strong>Data state management using different JS frameworks / libs</strong> This exercise uses jQuery
+        </div>
+        <hr />
+        <div class="text-center">
+            <label>
+                Rows:
+                <input type="number" min="1" value="5" id="row-count" />
+            </label>
+            <label>
+                Columns:
+                <input type="number" min="1" value="5" id="column-count" />
+            </label>
+            <button id="reset">Start Again</button>
+        </div>
+		<div class="matrix-container" id="matrix-container"></div>
+		
+        <div class="text-center">
+            Developed by
+            <br />
+            <img src="https://avatars3.githubusercontent.com/u/2802088?v=3&s=50" />
+            <br />
+            Sravan Rekandar
+            <br />
+            UI Developer based out of Banglore, India
+            <br/>
+            Feel free to reach me out for any suggestions. sravanrekandar@gmail.com
+        </div>
+	</div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ramda/0.19.1/ramda.min.js"></script>
+    
+    <!-- For offline development 
+        <script src="./libs/jquery.min.js"></script>
+        <script src="./libs/ramda.min.js"></script>
+    -->
+    <script src="./dist/app.js"> </script>
+    
+  </body>
+</html>
