@@ -1,79 +1,41 @@
-(function ($) {
-    'use strict'
-    const CONTAINER_ID = '#matrix-container'
-    const CELL_PROPS = {
-                cellTemplate: (cell) => (`<div class="cell">${cell.text}</cell>`),
-                cellSize: 30
-            }
-		
-    let ROWS = 3
-    let COLUMNS = 3
-    const GUTTER = 10
-    
-    function findNextPosition(position, matrix) {
-        const nextPosition = {}
-        if(position.x === 0) {
-            
-        }    
-    }
-    
-	function generateMatrix(ROWS, COLUMNS) {
-		let matrix = []
-        let count = 0
-		for (let i = 0; i < ROWS; i++) {
-			let row = []
-			for (let j = 0; j < COLUMNS; j++) {
-                row.push(++count)
-			}
-            matrix.push(row)
-		}
-        
-        return matrix
-	}
+import { generateMatrix, printMatrix } from './model-controls'
+import { generateViewModel, nextViewModel } from './view-model-controls'
+import { createCellViews, updateCellPositions } from './view-controls'
+import { CONTAINER_ID, CELL_PROPS, GUTTER } from './constants'
 
-    function generateMatrixModel(matrix) {
-        const model = []
-        
-        for (let i = 0; i < matrix.length; i++) {
-			for (let j = 0; j < matrix[i].length; j++) {
-                model.push({
-                    text: matrix[i][j],
-                    position: {
-                        x: i,
-                        y: j
-                    },
-                    nextPosition: findNextPosition({x: i, y: i}, matrix)
-                })
-			}
-		}
-        
-        return model
-    }
-    
-    function createCellViews(container, matrixModel) {
-        const { cellTemplate, cellSize } = CELL_PROPS
-        
-        for(let i = 0; i < matrixModel.length; i++) {
-            const newCellView = $(cellTemplate({text: i}))
-            newCellView.css({
-                top: (matrixModel[i].position.x * (cellSize + GUTTER)) + (matrixModel[i].position.x + GUTTER),
-                left: (matrixModel[i].position.y * (cellSize + GUTTER)) + (matrixModel[i].position.x + GUTTER)
-            })
-            
-            container.append(newCellView)
-        }
-    }
-    
-	$(function () {
-		const container = $(CONTAINER_ID)
-        
-        container.width( (CELL_PROPS.cellSize + GUTTER) * ROWS + GUTTER) 
-        container.height( (CELL_PROPS.cellSize + GUTTER) * COLUMNS + GUTTER)
-        
-		let matrix = generateMatrix(ROWS, COLUMNS)
-        let matrixModel = generateMatrixModel(matrix)
-        
-        createCellViews(container, matrixModel)
-	})
-    
-}(jQuery))
+let animTimeInteral
+
+function startApp() {
+  clearInterval(animTimeInteral)
+  const ROWS = Number($('#row-count').val())
+  const COLUMNS = Number($('#column-count').val())
+
+  const container = $(CONTAINER_ID)
+  container.empty()
+
+  const { cellSize } = CELL_PROPS
+  container.width((COLUMNS * cellSize) + ((COLUMNS + 1) * GUTTER))
+  container.height((ROWS * cellSize) + ((ROWS + 1) * GUTTER))
+
+  const matrix = generateMatrix(ROWS, COLUMNS)
+  printMatrix(matrix)
+  let viewModel = generateViewModel(matrix)
+
+  createCellViews(container, viewModel)
+
+  animTimeInteral = setInterval(() => {
+    viewModel = nextViewModel(viewModel)
+    updateCellPositions(viewModel)
+  }, 1000)
+}
+
+$(() => {
+  startApp()
+
+  const start = () => {
+    startApp()
+  }
+  $('#reset').click(start)
+
+  $('#row-count, #column-count').change(start)
+})

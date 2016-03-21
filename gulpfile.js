@@ -71,6 +71,7 @@ gulp.task('watch', ['build-persistent'], function() {
   });
 
   getBundler().on('update', function() {
+    gulp.start('minify-css')
     gulp.start('build-persistent')
   });
 });
