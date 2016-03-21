@@ -1,6 +1,8 @@
 ## Matrix anim - jQuery
+Demo: http://sravanrekandar.github.io/matrix-anim-jquery/
 
-This is one of the series of exercises to understand the data state management in different JS frameworks
+This is one of the series of exercises to understand the data state management in different JS frameworks.
+
 This exercise uses jQuery
 
 ### Initial setup
