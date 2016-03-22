@@ -17,11 +17,13 @@
     "babelify": "~5.0.3",
     "browser-sync": "^1.7.1",
     "browserify": "^6.3.3",
+    "browserify-shim": "^3.8.12",
     "eslint": "^2.4.0",
     "eslint-config-airbnb": "^6.1.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.3",
     "gulp-rename": "^1.2.0",
+    "jsdom": "^8.1.0",
     "lodash": "^2.4.1",
     "mocha": "^2.4.5",
     "ramda": "^0.19.1",
@@ -35,5 +37,14 @@
     "lint": "./node_modules/.bin/eslint src",
     "lint-tests": "./node_modules/.bin/eslint test",
     "test": "mocha --compilers js:babel-register"
+  },
+  "browserify": {
+    "transform": [ "browserify-shim" ]
+  },
+  "browserify-shim": {
+    "jQuery": "global:jQuery",
+    "$": "global:$",
+    "R": "global:R",
+    "ramda": "global:R"
   }
 }

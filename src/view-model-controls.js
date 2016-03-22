@@ -1,3 +1,5 @@
+import R from 'ramda'
+
 function addElementToList(list, row, column, matrix) {
   const hasElement = list.find((el) => (el.id === `cell-${row}-${column}`))
   if (!hasElement) {

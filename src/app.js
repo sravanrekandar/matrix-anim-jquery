@@ -1,3 +1,5 @@
+import $ from 'jQuery'
+
 import { generateMatrix, printMatrix } from './model-controls'
 import { generateViewModel, nextViewModel } from './view-model-controls'
 import { createCellViews, updateCellPositions } from './view-controls'
