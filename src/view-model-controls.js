@@ -27,12 +27,12 @@ export function generateViewModel(matrix) {
 
     // Top Edge
     /*
-      ,____________________,
+      ,________________,
       |  00    01   02 |  03
-      '--------------------'
-      10    11   12    13
-      20    21   22    23
-      30    31   32    33
+      '----------------'
+         10    11   12    13
+         20    21   22    23
+         30    31   32    33
     */
     row = circle
     for (column = circle; column < COLUMNS - circle - 1; column++) {
@@ -41,11 +41,11 @@ export function generateViewModel(matrix) {
 
     // Right Edge
     /*
-                ,_____,
+                      ,_____,
       00    01   02   |  03 |
       10    11   12   |  13 |
       20    21   22   |  23 |
-                `-----'
+                      `-----'
       30    31   32    33
     */
     column = COLUMNS - circle - 1
@@ -58,9 +58,9 @@ export function generateViewModel(matrix) {
       00    01   02    03
       10    11   12    13
       20    21   22    23
-          ,____________________,
+          ,________________,
       30  |  31   32    33 |
-          `--------------------'
+          `----------------'
     */
     row = ROWS - circle - 1
     for (column = COLUMNS - circle - 1; column > circle; column--) {
@@ -69,7 +69,7 @@ export function generateViewModel(matrix) {
 
     // Left Edge
     /*
-      00    01   02    03
+        00     01   02    03
       ,____,
       | 10 |   11   12    13
       | 20 |   21   22    23

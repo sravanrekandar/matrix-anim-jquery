@@ -15,9 +15,7 @@ var config = {
   outputDir: './dist/',
   outputFile: 'app.js',
   cssSource: './src/*.css',
-  cssDest: './dist/',
-  libSource: './libs/*.*',
-  libDest: './dist/libs/',
+  cssDest: './dist/'
 };
 
 // clean the output directory
@@ -49,12 +47,7 @@ gulp.task('minify-css', function() {
     .pipe(gulp.dest(config.cssDest));
 });
 
-gulp.task('libs', function() {
-  return gulp.src(config.libSource)
-    .pipe(gulp.dest(config.libDest));
-});
-
-gulp.task('build-persistent', ['minify-css', 'libs'], function() {
+gulp.task('build-persistent', ['minify-css'], function() {
   return bundle();
 });
 

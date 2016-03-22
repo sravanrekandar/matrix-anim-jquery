@@ -2,8 +2,8 @@ import { CELL_PROPS, GUTTER } from './constants'
 
 function getCellViewPosition(cell) {
   const { cellSize } = CELL_PROPS
-  const top = (cell.position.x * (cellSize + GUTTER)) + (cell.position.x + GUTTER)
-  const left = (cell.position.y * (cellSize + GUTTER)) + (cell.position.y + GUTTER)
+  const top =  (cellSize * cell.position.x) + ((cell.position.x + 1 ) * GUTTER)
+  const left = (cellSize * cell.position.y) + ((cell.position.y + 1 ) * GUTTER)
   return {
     top: `${top}px`,
     left: `${left}px`,
