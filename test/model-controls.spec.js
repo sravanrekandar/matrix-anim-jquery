@@ -27,7 +27,7 @@ describe('#model-controls', () => {
       const ROWS = 2
       const COLUMNS = 2
       const matrix = generateMatrix(ROWS, COLUMNS)
-      assert.equal(true, R.equals(twoBytwoMatrix, matrix))
+      assert(R.equals(twoBytwoMatrix, matrix))
       done()
     })
 
@@ -35,7 +35,7 @@ describe('#model-controls', () => {
       const ROWS = 1
       const COLUMNS = 3
       const matrix = generateMatrix(ROWS, COLUMNS)
-      assert.equal(true, R.equals(oneBythreeMatrix, matrix))
+      assert(R.equals(oneBythreeMatrix, matrix))
       done()
     })
   })
