@@ -23,9 +23,11 @@
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.3",
     "gulp-rename": "^1.2.0",
+    "jquery": "^2.2.2",
     "jsdom": "^8.1.0",
     "lodash": "^2.4.1",
     "mocha": "^2.4.5",
+    "mocha-jsdom": "^1.1.0",
     "ramda": "^0.19.1",
     "rimraf": "~2.2.8",
     "vinyl-source-stream": "^1.0.0",
@@ -39,10 +41,12 @@
     "test": "mocha --compilers js:babel-register"
   },
   "browserify": {
-    "transform": [ "browserify-shim" ]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "browserify-shim": {
-    "jQuery": "global:jQuery",
+    "jquery": "global:jQuery",
     "$": "global:$",
     "R": "global:R",
     "ramda": "global:R"

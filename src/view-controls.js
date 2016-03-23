@@ -1,3 +1,4 @@
+import $ from 'jquery'
 import { CELL_PROPS, GUTTER } from './constants'
 
 function getCellViewPosition(cell) {

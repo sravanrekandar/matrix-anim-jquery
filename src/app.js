@@ -1,4 +1,4 @@
-import $ from 'jQuery'
+import $ from 'jquery'
 
 import { generateMatrix, printMatrix } from './model-controls'
 import { generateViewModel, nextViewModel } from './view-model-controls'
