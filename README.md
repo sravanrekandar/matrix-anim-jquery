@@ -35,10 +35,12 @@ gulp serve
 gulp watch
 ```
 
-### tests
+### Tests
 ```bash
 npm test
+```
 
-### linting
+### Linting
 ```bash
 npm run lint
+```
