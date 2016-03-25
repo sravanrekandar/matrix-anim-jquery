@@ -5,6 +5,10 @@ This is one of the series of exercises to understand the data state management i
 
 This exercise uses jQuery
 
+[View demo and documentation here:](http://sravanrekandar.com/s/matrix-anim/)
+![Matrix Animation](https://raw.githubusercontent.com/sravanrekandar/matrix-anim/master/images/anim.gif "Matrix Animation")
+
+
 ### Initial setup
 ```bash
 # Clone the repo...
@@ -26,3 +30,11 @@ gulp serve
 # If you wanna Gulp to re-build on every change...
 gulp watch
 ```
+
+### tests
+```bash
+npm test
+
+### linting
+```bash
+npm run lint
