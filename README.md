@@ -4,13 +4,13 @@ This is one of the series of exercises to understand the data state management i
 
 This exercise uses jQuery
 
-[View demo and documentation here:](http://sravanrekandar.com/s/matrix-anim/)
+[View demo and documentation here: http://sravanrekandar.com/s/matrix-anim/](http://sravanrekandar.com/s/matrix-anim/)
 
 ![Matrix Animation](https://raw.githubusercontent.com/sravanrekandar/matrix-anim/master/images/anim.gif "Matrix Animation")
 
 ## Other implementations
-React + Redux
-  [Demo](http://sravanrekandar.com/s/matrix-anim/react-redux/)
+React + Redux: 
+  [Demo](http://sravanrekandar.com/s/matrix-anim/react-redux/) | 
   [Code](https://github.com/sravanrekandar/matrix-anim-react-redux)
 
 ### Initial setup
