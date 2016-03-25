@@ -1,13 +1,17 @@
-## Matrix anim - jQuery
-Demo: http://sravanrekandar.github.io/matrix-anim-jquery/
+## Matrix Animation - jQuery
 
 This is one of the series of exercises to understand the data state management in different JS frameworks.
 
 This exercise uses jQuery
 
 [View demo and documentation here:](http://sravanrekandar.com/s/matrix-anim/)
+
 ![Matrix Animation](https://raw.githubusercontent.com/sravanrekandar/matrix-anim/master/images/anim.gif "Matrix Animation")
 
+## Other implementations
+React + Redux
+  [Demo](http://sravanrekandar.com/s/matrix-anim/react-redux/)
+  [Code](https://github.com/sravanrekandar/matrix-anim-react-redux)
 
 ### Initial setup
 ```bash
