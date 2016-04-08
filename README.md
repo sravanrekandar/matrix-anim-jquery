@@ -6,7 +6,7 @@ This exercise uses jQuery
 
 [View demo and documentation here: http://sravanrekandar.com/s/matrix-anim/](http://sravanrekandar.com/s/matrix-anim/)
 
-![Matrix Animation](https://raw.githubusercontent.com/sravanrekandar/matrix-anim/master/images/anim.gif "Matrix Animation")
+![Matrix Animation](http://sravanrekandar.com/s/matrix-anim/react-redux/image_src_react_redux.png "Matrix Animation")
 
 ## Other implementations
 React + Redux: 
